@@ -1,0 +1,56 @@
+/******** reciclar ********/
+
+.container_reciclar {
+
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 3em;
+
+    img {
+        width: 100%;
+        height: 25rem;
+        box-shadow: $box_shadow;
+        animation: reciclar_imagen;
+        animation-duration: 2s;
+    }
+}
+
+@keyframes reciclar_imagen {
+    
+    0% {
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.botones_reciclar {
+
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 2em;
+
+    .boton_reciclar {
+        width: 40px;
+        background-color: $color_negro;
+        border: 2px solid $color_negro;
+        color: $color_terciario;
+        border-radius: 50%;
+        height: 40px;
+        text-align: center;
+        margin: 15px;
+        font-size: 30px;
+        @include transition;
+    }
+
+        .boton_reciclar:hover {
+            @include transition;
+            border: $border_verde;
+            color: $color_principal;
+        }
+}
+

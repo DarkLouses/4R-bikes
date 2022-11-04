@@ -1,0 +1,198 @@
+/* ---- Bloque 1 (carousel) ---- */
+
+.container_carousel {
+
+    border-radius: 35px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 500px 1fr;
+
+    img {
+        width: 280px;
+    }
+
+        .container_texto {
+            margin-top: 8rem;
+            width: 100%;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: center;
+        }
+
+            h2 {
+                font-family: monospace;
+                text-align: center;
+            }
+
+                .icono {
+                    margin: 20px;
+                    background-size: 100px;
+                    background-color: $color_negro;
+                    padding: 70px;
+                    display: inline-block;
+                    border: $border_negro;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    border-radius: 35px;
+                    box-shadow: $box_shadow;
+                    @include transition;
+                }
+
+                    .icono:hover {
+                        filter: invert(0%) sepia(7%) saturate(0%) hue-rotate(66deg) brightness(108%) contrast(107%);
+                    }
+
+                        .container_imagen{
+                            background-image: url(../Img/carousel_3.jpg);
+                            width: 100%;
+                            height: 40rem;
+                            background-position: right;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            border-radius: 10px;
+                            box-shadow: $box_shadow;
+                            @include transition;   
+                        }
+
+                        .one {
+                            grid-column: 1/3;
+                            grid-row: 3;
+                        }
+
+                            .container_inicio{
+                                display: grid;
+                                grid-template-columns: 1fr 1fr;
+                                justify-content: center; 
+                            }
+
+                                .boton {
+                                    @include Botones;
+                                }                
+}
+
+.imagen_logo {
+    background-image: url(../Img/logo2.png); 
+}
+
+.imagen_arbol {
+    background-image: url(../Img/image.png);
+}
+
+
+/* ---- Bloque 2 (Links)  ---- */
+
+.link {
+    @include imagenes_bucles;
+}
+
+.link2 {
+    @include imagenes_bucles2;
+}
+
+.container_link {
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .link {
+        width: 24rem;
+        height: 24rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 15px;
+        border-radius: 10px;
+        box-shadow: $box_shadow;
+        @include transition;
+    }
+
+    .link:hover  {
+        background-position: left;
+        @include transition;
+    }
+
+
+
+        p {
+            margin: 5%;
+            text-align: center;
+            color: $color_segundario;
+            opacity: 1;
+            margin-top: 100px;
+            @include transition;
+        
+        }        
+
+            a {
+                display: flex;
+                justify-content: center;
+                color: $color_segundario;
+                font-size: 30px;
+                text-align:center;
+                margin-top: 65%;
+                opacity: 1;
+                margin-top: 0;
+                margin-top: 120px;
+                @include transition;
+            
+            }
+                a:hover {
+                    animation-name: Animation_Colores;
+                    animation-duration: 2.5s;
+                    animation-iteration-count: infinite;
+                }
+}
+
+@keyframes Animation_Colores {
+
+    0% {
+        color: $color-principal;
+    }
+
+    50% {
+        color: $color-segundario;
+    }
+
+    100% {
+        color: $color-terciario;
+    }
+}
+
+/* ---- Media query  ---- */
+
+@media (max-width: 800px) {
+
+    .container_carousel {
+        width: 100%;
+        margin : 0;
+        grid-template-columns: 1fr;
+
+        .container_texto {
+            height: 100%;
+        }        
+            .container_imagen{ 
+                margin-top: 9em;
+                margin-left: 1px;
+                height: 30rem;
+            }
+
+                .boton {
+                    height: 3.5rem;
+                }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+

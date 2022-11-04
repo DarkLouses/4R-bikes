@@ -1,0 +1,49 @@
+// Global sass //
+@import 
+    './variables.scss',
+    './card_grid',
+    './card_productos.scss'
+;
+
+// sass unicos de paginas //
+@import 
+    '../paginas/nav/nav.scss',
+    '../paginas/nav/footer.scss',
+    '../paginas/inicio/inicio.scss',
+    '../paginas/login/login.scss',
+    '../paginas/about/about.scss',
+    '../paginas/soporte/soporte.scss',
+    '../paginas/tienda/reciclaje.scss',
+    '../paginas/tienda/adaptacion.scss',
+    '../paginas/admin/admin.scss'
+;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+   background: black;
+   opacity: 0.2;
+  }
+body::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+    background: $color_principal;
+    opacity: 0.2;
+}
+
+section {
+    position: relative;
+}
+  
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    user-select: none;
+}  

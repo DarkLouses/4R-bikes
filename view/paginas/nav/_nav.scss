@@ -1,0 +1,208 @@
+nav {
+
+    height: 70px;
+    background-image: $color_linear;
+    box-shadow: 0 3px 15px $color_negro;
+    
+
+    .logo {
+        color: $color_principal;
+        font-size: 33px;
+        font-weight: bold;
+        line-height: 70px;
+        padding-left: 110px;
+    }
+
+        .fa-user {
+            @include transition;
+            cursor: pointer;
+        }
+
+            .fa-user:hover {
+                color: $color_hover;
+                @include transition;
+            }
+
+                ul {
+                    float: right;
+                    margin-right: 30px;
+                }
+
+                    li {
+                        z-index: 1000;
+                        display: inline-block;
+                    }
+
+                        a {
+                            color: $color_principal;
+                            display: block;
+                            padding: 0 15px;
+                            line-height: 70px;
+                            font-size: 20px;
+                            transition: .5s;
+                        }
+
+                            a:hover{
+                                color: $color_segundario;
+                            }
+
+                                .fa-bars {
+                                    color: $color_principal;
+                                    @include transition;
+                                }
+
+                                    .fa-bars:hover {
+                                        color: $color_hover;
+                                        @include transition;
+                                    }
+}
+
+.user {
+    color: $color_principal;
+}
+.no_user {
+    color: $color_segundario;
+}
+
+.boton_user {
+    color: $color_segundario;
+}
+
+nav ul ul{
+    
+    position: absolute;
+    top: 85px;
+    border-top: 3px solid $color_principal;
+    opacity: 0;
+    visibility: hidden;
+
+
+
+        li {
+            width: 180px;
+            display: list-item;
+            position: relative;
+            border-top: none;
+        }
+
+            a {
+                line-height: 50px;
+            }
+}
+
+nav ul ul a{
+    width: 100%;
+    background: #2c2c2c;
+}
+
+li:hover > ul {
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul ul ul{
+
+    border-top: none;
+
+    li{
+        position: relative;
+        top: -70px;
+        left: 150px;
+    }
+
+        a i {
+            margin-left: 45px;
+        }
+}
+
+.checkbtn {
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 1080px) {
+
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+
+    .checkbtn {
+        display: block;
+    }
+
+    nav ul {
+      z-index: 1000;
+      float: none;
+      margin-right: 30px; 
+      width: 100%;
+    }
+    
+    ul{
+        position: fixed;
+        width: 100%;
+        background-image: $color_linear;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul  ul{
+        z-index: 1000;
+        top: 0px;
+        opacity: 1;
+        visibility: visible;
+        position: relative;
+    }
+
+    nav ul li ul{
+        z-index: 1000;
+        top: 0px;
+        text-align: center;
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    nav ul li:hover > ul{
+        top: 0;
+        display: block; 
+    }
+
+    ul .children{
+        width: 100%;
+        display: block; 
+    }
+
+    nav ul ul li{
+        width: 100%;
+    }
+
+    nav ul ul a{
+        width: 100%;
+        background: $color_negro2;
+    }
+    
+    #check:checked ~ ul, ul ul{
+      left: 0;
+    }
+  
+}

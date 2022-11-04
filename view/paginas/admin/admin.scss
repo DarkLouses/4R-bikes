@@ -1,0 +1,202 @@
+.contentAdmin{
+  .btnnewProd{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background-color: $color_principal;
+    color: $color_terciario;
+    font-weight: bolder;
+    border-radius: 7px;
+    margin-top: 11px;
+    margin-bottom: 2px;
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index:999;
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: $color_negro ;
+  
+  .modal-content {
+    background-color: $color_terciario;
+    margin: auto;
+    padding: 10px;
+    border: $border_gris;
+    width: 70%;
+    
+    .modificarModal{
+      position: relative;
+      width:100%;
+      height: 100%;
+
+      .botonEnviarModal{
+        padding: 10px;
+        font-weight: bold;
+      }
+
+      .close {
+          color: $color_gris;
+          float: right;
+          font-size: 29px;
+          font-weight: bold;
+      }
+      
+      .close:hover,
+      .close:focus {
+          color:$color_negro;
+          text-decoration: none;
+          cursor: pointer;
+      }
+
+      label{
+        color: $color_negro;
+        font-size: 2.3em;
+        justify-content: center;
+        display: flex;
+        margin: 10px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    
+      input{
+          width: 55%;
+          height: 25px;
+          background: $color_gris;
+          justify-content: center;
+          display: flex;
+          margin: 10px auto;
+          margin-top: 0px;
+          padding: 10px;
+          outline: none;
+          border-radius: 5px;
+          z-index: 1;
+      }
+      
+      .input-group{
+        label{
+          width: 50%;
+          justify-content: flex-start;
+          display: flex;
+          color: $color_negro ;
+          font-size: 1em;
+          margin:auto;
+          margin-top: 10px;
+          margin-bottom: 1px;
+        }
+
+        .inputImg {
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+}
+
+.proveedor {
+  color:$color_gris;
+  margin-top: 3px;
+}
+
+
+.container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .card {
+      position: relative;
+      min-width: 320px;
+      height: 440px;
+      box-shadow: $box_shadow;
+      border-radius: 15px;
+      margin: 30px;
+      transition: 0.5s;
+    }
+
+      .box {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        background-image: $color_linear;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        transition: 0.5s;
+      }
+
+        .box:hover {
+          transform: translateY(-50px);
+        }
+
+            .content {
+              padding: 20px;
+              text-align: center;
+            }
+
+                h3 {
+                  font-size: 1.8rem;
+                  color: $color_terciario;
+                  z-index: 1;
+                  transition: 0.5s;
+                  margin-bottom: 15px;
+                } 
+
+                  p {
+                    font-size: 1rem;
+                    font-weight: 300;
+                    color: $color_terciario;
+                    z-index: 1;
+                    transition: 0.5s;
+                  }
+
+                    .boton_user {
+                      position: relative;
+                      display: inline-block;
+                      padding: 8px 20px;
+                      background: $color_negro;
+                      border-radius: 5px;
+                      text-decoration: none;
+                      color: $color_terciario;
+                      margin-top: 20px;
+                      box-shadow: $box_shadow;
+                      transition: 0.5s;
+                    }
+                    
+                      .boton_user:hover {
+                        box-shadow: $box_shadow;
+                        background: $color_terciario;
+                        color:$color_negro;
+                      }
+}
+  
+ 
+
+
+  
+
+  
+
+
+  
+
+  
+

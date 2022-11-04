@@ -1,0 +1,132 @@
+.container_filtro { 
+
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+  
+    .container_form { 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+      .container_botones_filtro {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+  
+        .botones_filtro {
+          display: flex;
+          justify-content: flex-end;
+          padding: 16px 32px;
+          text-align: center;
+          margin: 15px;
+          font-size: 1.2em;
+          background: $color_negro;
+          border: 2px solid $color_negro;
+          border-radius: 6px;
+          @include transition;
+          cursor: pointer;
+        }
+  
+          .botones_filtro:hover {
+            color: $color_gris;
+            border: $border_gris;
+          }
+  
+            form {
+              display: flex;
+              align-items: center;
+              align-content: center;
+            }
+  
+              input {
+                  background: transparent;
+                  color: $color_negro;
+                  border: 0;
+                  outline: none;
+                  margin-right: 30px;
+                  height: 70%;
+                  border-bottom: $border_negro;
+                  width: 100%;
+              }
+  
+                  button {
+                    background: transparent;
+                    border: 0;
+                    outline: none;
+                    cursor: pointer;
+                  }
+  
+                    .fas {
+                        font-size: 20px;
+                        color: $color_negro;
+                    }
+  
+                        .far {
+                          font-size: 25px;
+                          margin-right: 10px;
+                          color: $color_negro;
+                      }
+  
+  }
+  
+.botones_normal {
+    color: $color_principal;
+}
+  
+.botones_normal_click {
+    color: $color_gris;
+    border: 2px solid  $color_gris;
+}
+  
+
+@media (max-width: 1215px) {
+
+    .container_form {
+      margin: 20px;
+    }
+  
+    .container_filtro { 
+      grid-template-columns: 1fr;
+  
+      .container_botones_filtro {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        margin: auto;
+      }
+    }
+}
+  
+@media (max-width: 860px) {
+  
+  
+    .container_filtro { 
+      grid-template-columns: 1fr;
+  
+      .container_botones_filtro {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: auto;
+      }
+    }
+}
+
+@media (max-width: 730px) {
+  
+    .container_filtro { 
+  
+      grid-template-columns: 1fr;
+  
+      .container_botones_filtro {
+        grid-template-columns: 1fr 1fr;
+      }
+  
+        .botones_filtro {
+          justify-content: center;
+          width: 6em;
+          margin-left: 2px;
+        }
+    }
+}
+    

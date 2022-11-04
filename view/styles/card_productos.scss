@@ -1,0 +1,103 @@
+.body_caro {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .card {
+        position: relative;
+        width: 320px;
+        height: 580px;
+        background: $color_negro;
+        border-radius: 20px;
+        overflow: hidden;
+        margin: 15px;
+    }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            width: 100%;
+            height: 100%;
+            background: $color_principal;
+            transform: skewY(345deg);
+            transition: 0.5s;
+        }
+
+            .card:hover::before {
+              top: -70%;
+              transform: skewY(390deg);
+            }
+
+              .card::after {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                font-weight: 600;
+                font-size: 6em;
+                color: $color_negro;
+              }
+
+                .card .imgBox {
+                  position: relative;
+                  width: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  padding-top: 20px;
+                  z-index: 1;
+                }
+
+                .card .contentBox {
+                  position: relative;
+                  padding: 20px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  flex-direction: column;
+                  z-index: 2;
+                }
+
+                  .card .contentBox h3 {
+                    font-size: 18px;
+                    color: $color_terciario;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                  }
+
+                    .card .contentBox .price {
+                      font-size:15px;
+                      text-align: center;
+                      color: $color_terciario;
+                      font-weight: 700;
+                      letter-spacing: 1px;
+                    }
+
+                      .card .contentBox .buy {
+                        position: relative;
+                        top: 100px;
+                        opacity: 0;
+                        padding: 10px 30px;
+                        margin-top: 15px;
+                        color: #000000;
+                        text-decoration: none;
+                        background: $color_principal;
+                        border-radius: 30px;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        transition: 0.5s;
+                      }
+                        .card:hover .contentBox .buy {
+                          top: 0;
+                          opacity: 1;
+                        }                    
+                            .mouse {
+                              height: 300px;
+                              width: auto;
+                            }            
+}
+
+
+
